@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataService } from './data.service';
-
+import { FormsModule } from '@angular/forms'; // Import the FormsModule
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +17,7 @@ import { DataService } from './data.service';
     BrowserModule,
     HttpClientModule, // Add HttpClientModule to the imports array
     AppRoutingModule,
+    FormsModule 
   ],
   providers: [DataService],
   bootstrap: [AppComponent],
