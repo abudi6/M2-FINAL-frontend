@@ -1,38 +1,53 @@
 <!-- home.component.html -->
+<body style="background-color:#e6e6fa">
+<div class="header">
+  <h1>Item Management System</h1>
+</div>
+
 <div>
+<div class="container">
+  <div class="form-container">
+    <h1>Add New Item</h1>
     <!-- Add button and form fields -->
     <label for="newName">Name:</label>
     <input type="text" id="newName" [(ngModel)]="newItemForAdd.name" />
-  
+
     <label for="newBrand">Brand:</label>
     <input type="text" id="newBrand" [(ngModel)]="newItemForAdd.brand" />
-  
+
     <label for="newUnitPrice">Unit Price:</label>
     <input type="text" id="newUnitPrice" [(ngModel)]="newItemForAdd.unitPrice" />
-  
-    <button (click)="addItem()">Add</button>
+
+    <button (click)="addItem()">
+      <i class="fas fa-plus"></i> Add
+    </button>
   </div>
-  
-  <div>
+
+  <div class="save-container">
     <!-- Save button and form fields -->
+    <h1>Update an Item</h1>
     <label for="code">Code:</label>
     <input type="text" id="code" [(ngModel)]="newItem.code" disabled />
-  
+
     <label for="name">Name:</label>
     <input type="text" id="name" [(ngModel)]="newItem.name" />
-  
+
     <label for="brand">Brand:</label>
     <input type="text" id="brand" [(ngModel)]="newItem.brand" />
-  
+
     <label for="unitPrice">Unit Price:</label>
     <input type="text" id="unitPrice" [(ngModel)]="newItem.unitPrice" />
-  
-    <button (click)="saveChanges()">Save</button>
+
+    <button (click)="saveChanges()">
+      <i class="fas fa-save"></i> Save
+    </button>
   </div>
+</div>
 
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Code</th>
       <th>Brand</th>
@@ -43,15 +58,23 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of items">
+      <td>{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.code }}</td>
       <td>{{ item.brand }}</td>
       <td>{{ item.unitPrice }}</td>
       <td>{{ item.dateAdded }}</td>
       <td>
-        <button (click)="editItem(item.code)">Edit</button>
-        <button (click)="deleteItem(item.code)">Delete</button>
+        <button class="edit" (click)="editItem(item.code)">
+          <i class="fas fa-edit"></i>
+        </button>
+        <button class="delete" (click)="deleteItem(item.code)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
       </td>
     </tr>
   </tbody>
 </table>
+<div class="footer">
+  <p>© 2024 Abdulrahman Al Azzouni</p>
+</div>

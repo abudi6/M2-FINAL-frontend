@@ -1,18 +1,97 @@
 /* home.component.css */
+/* Style for the header */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #0c4d78; /* Header background color */
+  color: #fff; /* Header text color */
+  margin-bottom: 20px;
+}
+/* Style for the container div */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #ccc; /* Updated border color */
+  padding: 20px;
+  background-color: #03a3f3; /* Updated background color */
+}
+
+/* Style for each individual div */
+.form-container, .save-container {
+  width: 48%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff; /* Updated background color */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle lift effect */
+}
+
+
+/* Rest of the styles remain the same */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 10px; /* Add margin to separate buttons */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Styles for table buttons */
+table button.delete {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+}
+
+table button.edit {
+  background-color: #a4ac0a;
+  color: #fff;
+  border: none;
+}
+
+table button:hover.delete {
+  background-color: #c0392b;
+}
+
+table button:hover.edit {
+  background-color: #798310;
+}
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #0c4d78; /* Footer background color */
+  color: #fff; /* Footer text color */
+  margin-top: 20px;
+}
