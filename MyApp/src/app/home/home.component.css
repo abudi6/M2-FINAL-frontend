@@ -1,37 +1,53 @@
 /* home.component.css */
 /* Style for the header */
 .header {
-  text-align: center;
   padding: 20px;
-  background-color: #0c4d78; /* Header background color */
-  color: #fff; /* Header text color */
+  background-color: #0c4d78;
+  color: #fff;
   margin-bottom: 20px;
-  margin-top: 0; /* Remove top margin */
+  border-bottom: 2px solid #fff; /* Add a border to separate header and content */
 }
 /* Style for the container div */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid #ccc; /* Updated border color */
+  border: 1px solid #ccc;
   padding: 20px;
-  margin: 20px; 
-  background-color: #03a3f3; /* Updated background color */
+  margin: 20px;
+  background-color: #03a3f3;
+  border-radius: 10px; /* Reduced border-radius for a cleaner look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for each individual div */
-.form-container, .save-container {
+.form-container,
+.save-container {
   width: 48%;
   box-sizing: border-box;
   border: 1px solid #ddd;
   padding: 20px;
   background-color: #fff; /* Updated background color */
-  border-radius: 5px; /* Add border-radius for rounded corners */
+  border-radius: 20px; /* Add border-radius for rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle lift effect */
 }
 
+.form-button {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.save-button {
+  margin-top: 20px;
+  width: 100%;
+}
 
 /* Rest of the styles remain the same */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
 label {
   display: block;
   margin-bottom: 5px;
@@ -44,9 +60,11 @@ input {
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 16px;
   cursor: pointer;
-  margin-right: 10px; /* Add margin to separate buttons */
+  margin-right: 10px;
+  background-color: #3498db; /* Default button background color */
+  color: #fff; /* Default button text color */
 }
 
 button:hover {
@@ -57,11 +75,15 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  background-color: #fff; /* Add a consistent background color for the table */
+  border-radius: 10px; /* Add border-radius for a cleaner look */
+  overflow: hidden; /* Hide overflowing content within the table */
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -92,8 +114,9 @@ table button:hover.edit {
 }
 .footer {
   text-align: center;
-  padding: 10px;
-  background-color: #0c4d78; /* Footer background color */
-  color: #fff; /* Footer text color */
+  padding: 15px;
+  background-color: #0c4d78;
+  color: #fff;
   margin-top: 20px;
+  border-top: 2px solid #fff; /* Add a border to separate footer and content */
 }

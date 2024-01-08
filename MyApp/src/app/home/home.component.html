@@ -2,45 +2,48 @@
 <div class="header">
   <h1>Item Management System</h1>
 </div>
-<body style="background-color:#e6e6fa; margin: 0;">
+<body style="background-color: #e6e6fa; margin: 0">
+  <div class="container">
+    <div class="form-container">
+      <h1>Add New Item</h1>
+      <!-- Add button and form fields -->
+      <label for="newName">Name:</label>
+      <input type="text" id="newName" [(ngModel)]="newItemForAdd.name" />
 
-<div class="container">
-  <div class="form-container">
-    <h1>Add New Item</h1>
-    <!-- Add button and form fields -->
-    <label for="newName">Name:</label>
-    <input type="text" id="newName" [(ngModel)]="newItemForAdd.name" />
+      <label for="newBrand">Brand:</label>
+      <input type="text" id="newBrand" [(ngModel)]="newItemForAdd.brand" />
 
-    <label for="newBrand">Brand:</label>
-    <input type="text" id="newBrand" [(ngModel)]="newItemForAdd.brand" />
+      <label for="newUnitPrice">Unit Price:</label>
+      <input
+        type="text"
+        id="newUnitPrice"
+        [(ngModel)]="newItemForAdd.unitPrice"
+      />
 
-    <label for="newUnitPrice">Unit Price:</label>
-    <input type="text" id="newUnitPrice" [(ngModel)]="newItemForAdd.unitPrice" />
+      <button class="form-button" (click)="addItem()">
+        <i class="fas fa-plus"></i> Add
+      </button>
+    </div>
+    <div class="save-container">
+      <!-- Save button and form fields -->
+      <h1>Update an Item</h1>
+      <label for="code">Code:</label>
+      <input type="text" id="code" [(ngModel)]="newItem.code" disabled />
 
-    <button (click)="addItem()">
-      <i class="fas fa-plus"></i> Add
-    </button>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="newItem.name" />
+
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" [(ngModel)]="newItem.brand" />
+
+      <label for="unitPrice">Unit Price:</label>
+      <input type="text" id="unitPrice" [(ngModel)]="newItem.unitPrice" />
+
+      <button class="save-button" (click)="saveChanges()">
+        <i class="fas fa-save"></i> Save
+      </button>
+    </div>
   </div>
-  <div class="save-container">
-    <!-- Save button and form fields -->
-    <h1>Update an Item</h1>
-    <label for="code">Code:</label>
-    <input type="text" id="code" [(ngModel)]="newItem.code" disabled />
-
-    <label for="name">Name:</label>
-    <input type="text" id="name" [(ngModel)]="newItem.name" />
-
-    <label for="brand">Brand:</label>
-    <input type="text" id="brand" [(ngModel)]="newItem.brand" />
-
-    <label for="unitPrice">Unit Price:</label>
-    <input type="text" id="unitPrice" [(ngModel)]="newItem.unitPrice" />
-
-    <button (click)="saveChanges()">
-      <i class="fas fa-save"></i> Save
-    </button>
-  </div>
-</div>
 </body>
 <table>
   <thead>
@@ -51,7 +54,8 @@
       <th>Brand</th>
       <th>Unit Price</th>
       <th>Date Added</th>
-      <th>Action</th> <!-- New action column -->
+      <th>Action</th>
+      <!-- New action column -->
     </tr>
   </thead>
   <tbody>
