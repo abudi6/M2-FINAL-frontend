@@ -3,11 +3,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
-// home.component.ts
-
-// home.component.ts
-
-// ... (existing imports)
 
 @Component({
   selector: 'app-home',
